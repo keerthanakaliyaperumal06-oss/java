@@ -7,5 +7,6 @@ public class Securitypermission {
         int permissionB=scan.nextInt();
         int finalpermission=permissionA | permissionB;
         System.out.println(finalpermission);
+        scan.close();
     }
 }
