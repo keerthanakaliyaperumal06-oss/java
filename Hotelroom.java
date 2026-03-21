@@ -10,5 +10,6 @@ public class Hotelroom{
 
         float finalrevenue=(rooms*price)+servicecharges-commission;
         System.out.println(finalrevenue);
+        scan.close();
     }
 }
