@@ -10,5 +10,6 @@ public class Deliveryservice{
 
         float netearnings=(deliveries*payout)+incentive-fuelcost;
         System.out.println(netearnings);
+        scan.close();
     }
 }
