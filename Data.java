@@ -17,6 +17,7 @@ public class Data{
 
         float Totalbill=(Basecost+(ExtraGB*RateperGB))*(1+Tax/100);
         System.out.println("Totalbill="+Totalbill);
+        scan.close();
 
 
         
