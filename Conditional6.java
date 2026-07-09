@@ -40,20 +40,21 @@ public class Conditional6 {
                 basePrice = 5000.0;
             }
         }
-        if (seatAvailability <= 30 || daysUntilDeparture <= 10) {
-            multiplier = 1.5;
+        if (seatAvailability <= 30 || daysUntilDeparture <= 14) {
+            multiplier = 1.8;
             category = "High Demand";
 
-            if (seatAvailability <= 20 && daysUntilDeparture <= 7) {
-                multiplier = 1.8;
+            if (seatAvailability <= 50 && daysUntilDeparture <= 30) {
+                multiplier = 1.5;
+                category="High demand";
             }
         } 
         else if (seatAvailability <= 60 || daysUntilDeparture <= 30) {
-            multiplier = 1.3;
+            multiplier = 1.0;
             category = "Moderate";
         } 
         else {
-            if (daysUntilDeparture >= 90) {
+            if (daysUntilDeparture >= 60) {
                 multiplier = 0.8;
             } else {
                 multiplier = 0.9;
@@ -70,5 +71,6 @@ public class Conditional6 {
         System.out.println("Demand Multiplier: " + multiplier + "x");
         System.out.println("Final Ticket Price: $" + finalPrice);
         System.out.println("Pricing Category: " + category);
+        sc.close();
     }
 }
